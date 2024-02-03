@@ -5,13 +5,13 @@ private:
 	char fileName[50];
 
 public:
-	Judy(const char* fileName);
+	Judy(const char*);
 	
 	template <typename T>
-	bool write(T* reg, int size = 1);
+	bool write(T*, int);
 
 	template <typename T>
-	bool read(T* reg, int size = 1);
+	bool read(T*, int);
 };
 
 
