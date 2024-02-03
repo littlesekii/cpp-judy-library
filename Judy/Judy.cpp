@@ -3,7 +3,7 @@
 #include <fstream>
 #include <cstring>
 
-using std::fstream;
+using std::ifstream;
 using std::ofstream;
 using std::ios;
 
@@ -22,7 +22,7 @@ bool Judy::write(T* reg, int size)
 	{
 		fout.write((char*)reg, sizeof(T) * size);
 	}
-	fout.close()
+	fout.close();
 	return true;
 }
 
@@ -34,7 +34,7 @@ bool Judy::read(T* reg, int size)
 
 	if (fin.is_open())
 	{
-		fout.read((char*)reg, sizeof(T) * size);
+		fin.read((char*)reg, sizeof(T) * size);
 	}
 	fin.close();
 	return true;
